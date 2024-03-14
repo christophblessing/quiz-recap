@@ -1,5 +1,34 @@
 import { Data, QuestionTypes } from '../types';
 
+const markdownQuestion = `# Markdown
+
+## A question
+
+> A block quote
+
+A paragraph with *emphasis* and **strong importance**.
+
+
+[a URL](https://daringfireball.net/projects/markdown/).
+
+### Lists
+
+1. First ordered list item
+2. Another item
+
+* Unordered
+* Unordered
+* [ ] todo
+* [x] done
+
+A table:
+
+| Column 1 | Column 2 |
+|----------|----------|
+| Data 1   | Data 2   |
+| Data 3   | Data 4   |
+`;
+
 export const exampleData: Data = [
   {
     id: '1',
@@ -125,22 +154,14 @@ export const exampleData: Data = [
     id: '11',
     points: 2,
     type: QuestionTypes.SingleChoice,
-    text: `A paragraph with *emphasis* and **strong importance**.
-
-    > A block quote with ~strikethrough~ and a URL: https://reactjs.org.
-
-    * Lists
-    * [ ] todo
-    * [x] done
-
-    A table:
-
-    | a | b |
-    | - | - |
-    `,
+    text: markdownQuestion,
     answers: [
       { id: 'a', correct: true, text: 'Markdown is pretty **great**!' },
-      { id: 'b', correct: false, text: 'Markdown is for __nerds__.' },
+      {
+        id: 'b',
+        correct: false,
+        text: 'Markdown is only for `nerds`.',
+      },
     ],
   },
 ];
