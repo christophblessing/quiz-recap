@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import { ResultType } from '../types';
 import { Context } from '../Context';
 import Button from './Button';
+import Markdown from './Markdown';
 
 const Result = () => {
   const {
@@ -38,7 +39,9 @@ const Result = () => {
                   <td className="qr-px-2 qr-py-2">
                     {result.correctlyAnswered ? '✅' : '❌'}
                   </td>
-                  <td className="qr-px-2 qr-py-2">{result.question.text}</td>
+                  <td className="qr-px-2 qr-py-2">
+                    <Markdown content={result.question.text}></Markdown>
+                  </td>
                 </tr>
               );
             })}

@@ -1,4 +1,5 @@
 import { QuestionTypes, QuizType } from '../types';
+import Markdown from './Markdown';
 
 const Question = ({
   text,
@@ -13,7 +14,7 @@ const Question = ({
 }) => {
   return (
     <div className="qr-pb-4">
-      <p className="qr-pb-4 qr-text-lg">{text}</p>
+      <Markdown content={text}></Markdown>
 
       {showResult ? (
         <p>Your answer was {isCorrect ? ' correct ✅' : ' not correct ❌'}</p>

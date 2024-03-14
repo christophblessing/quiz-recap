@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { AnswerType, QuestionTypes, QuizType } from '../types';
+import Markdown from './Markdown';
 
 const Answers = ({
   type,
@@ -57,10 +58,10 @@ const Answers = ({
               className="qr-w-100 qr-ml-2 qr-grow peer-checked:qr-font-bold"
               htmlFor={answer.id}
             >
-              {answer.text + ' '}
+              <Markdown content={answer.text}></Markdown>
               {showCorrect && (
                 <small>
-                  {answer.correct ? '- correct answer' : '- incorrect answer'}
+                  {answer.correct ? 'correct answer' : 'incorrect answer'}
                 </small>
               )}
             </label>

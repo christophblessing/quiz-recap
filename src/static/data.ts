@@ -121,6 +121,28 @@ export const exampleData: Data = [
       { id: 'd', correct: false, text: 'Claude Monet' },
     ],
   },
+  {
+    id: '11',
+    points: 2,
+    type: QuestionTypes.SingleChoice,
+    text: `A paragraph with *emphasis* and **strong importance**.
+
+    > A block quote with ~strikethrough~ and a URL: https://reactjs.org.
+
+    * Lists
+    * [ ] todo
+    * [x] done
+
+    A table:
+
+    | a | b |
+    | - | - |
+    `,
+    answers: [
+      { id: 'a', correct: true, text: 'Markdown is pretty **great**!' },
+      { id: 'b', correct: false, text: 'Markdown is for __nerds__.' },
+    ],
+  },
 ];
 
 export const testData: Data = [
